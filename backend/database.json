@@ -1,0 +1,9 @@
+{
+    "dev": {
+      "driver": "pg",
+      "user": "postgres",
+      "password": "home",
+      "host": "localhost",
+      "database": "resturan"
+    }
+  }

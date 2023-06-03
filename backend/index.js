@@ -4,19 +4,19 @@ const logger = require('morgan')
 const db = require('./db');
 const app = express('');
 const restRoute = require('./route/route')
-const { runMigrations } = require('node-pg-migrate');
+// const { runMigrations } = require('node-pg-migrate');
 const dbConfig = require('./db');
 
-runMigrations({
-  databaseUrl: dbConfig.connectionString,
-  dir: './migrations/1685799212434_my-first-migration.js',
-  direction: 'up',
-  count: Infinity, // Це виконає всі міграції
-}).then(() => {
-  console.log("міграції пройшли успішно");
-}).catch((error) => {
-  console.log(error);
-});
+// runMigrations({
+//   databaseUrl: dbConfig.connectionString,
+//   dir: './migrations/1685799212434_my-first-migration.js',
+//   direction: 'up',
+//   count: Infinity, // Це виконає всі міграції
+// }).then(() => {
+//   console.log("міграції пройшли успішно");
+// }).catch((error) => {
+//   console.log(error);
+// });
 
 
 app.use(express.json());
